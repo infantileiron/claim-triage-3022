@@ -1,0 +1,8 @@
+-- Correlation screening schema is created from SQLAlchemy metadata at startup.
+-- screenings: one immutable run per limit/claim revision; state pending/running/done/failed.
+-- correlation_groups: per-screening groups; carries decision/status/version and stale flags.
+-- group_members: frozen member snapshot (code/amount/claimant/merchant/occurred_at).
+-- group_events: created/carried/reviewed/approved/stale_split/stale_merge/stale_replaced history.
+-- correlation_states: single row lock serializing claim edits and rescreenings.
+-- claims gains nullable claimant/merchant/occurred_at; nulls are listed separately, not linked.
+-- Exact portable schema: src/models/entities.py.

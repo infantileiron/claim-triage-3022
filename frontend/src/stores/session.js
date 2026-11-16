@@ -1,1 +1,1 @@
-export const state={user:null,claims:[],trainings:[],reviews:[],selected:null};
+export const state={user:null,claims:[],trainings:[],reviews:[],screenings:[],selected:null,selectedScreening:null};
